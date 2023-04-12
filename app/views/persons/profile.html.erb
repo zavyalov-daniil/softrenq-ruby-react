@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "profile" %>
+<div class="profile">
+  <div class="profile_elements">
+    <% if user_signed_in? %>
+      <div class="profile_element">Здравствуйте, <%= current_user.email %></div>
+      <div class = "profile_element">
+        <%= link_to '<button type="button" class="btn btn-lg custom-button">Выйти</button>'.html_safe, destroy_user_session_path, :method => :delete %>
+      </div>
+    <% else %>
+      <div>
+        <%= link_to '<button type="button" class="btn btn-lg custom-button">Войти</button>'.html_safe, new_user_session_path %>
+      </div>
+      <div>
+        <%= link_to '<button type="button" class="btn btn-lg custom-button">Зарегистрироваться</button>'.html_safe, new_user_registration_path %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="main_class">
+      <h1>Person profile</h1>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+</div>
