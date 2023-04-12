@@ -1,0 +1,21 @@
+* { margin: 0; }
+.main_class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile {
+    display: flex;
+    justify-content: right;
+    height: 80px;
+}
+.profile_elements {
+    display: flex;
+}
+.profile_element {
+    margin: 30px;
+    vertical-align: middle;
+    height: 60px;
+}
